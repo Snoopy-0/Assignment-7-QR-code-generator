@@ -1,5 +1,13 @@
-__pycache__/
-.env
-*.pyc
 .git
 .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.envrc
+*.log
+dist/
+build/
+*.sqlite3
