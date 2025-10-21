@@ -14,6 +14,12 @@ jobs:
     permissions:
       contents: read
     steps:
+      - name: Verify DockerHub secrets present
+        run: |
+          if [ -z "${{ secrets.DOCKERHUB_USERNAME }}" ] || [ -z "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
+            echo "ERROR: DOCKERHUB_USERNAME or DOCKERHUB_TOKEN is missing (add as Actions Secrets)."
+            exit 1
+          fi
       - name: Checkout
         uses: actions/checkout@v4
 
