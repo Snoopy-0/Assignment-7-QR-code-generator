@@ -1,15 +1,12 @@
-
----
-
-## `.github/workflows/dockerhub.yml` (build + push on `main` and tags)
-> Configure GitHub repo **Secrets**: `DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN`.
-```yaml
 name: Build and Push to DockerHub
 
 on:
   push:
-    branches: [ "main" ]
-    tags: [ "v*", "release-*" ]
+    branches:
+      - main
+    tags:
+      - 'v*'
+      - 'release-*'
 
 jobs:
   docker:
