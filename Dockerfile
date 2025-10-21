@@ -33,4 +33,4 @@ USER myuser
 # Default process
 ENTRYPOINT ["python", "main.py"]
 # Default args (can be overridden at `docker run`)
-CMD ["--url", "http://github.com/kaw393939"]
+CMD ["--url", "https://github.com/Snoopy-0/Assignment-7-QR-code-generator"]
